@@ -11,8 +11,8 @@ class VanillaOption : public Option
 
 		double GetStrike() override;
 
-		virtual OptionType GetOptionType() = 0;
-		virtual double payoff(double) = 0;
+		virtual OptionType GetOptionType() override = 0;
+		virtual double payoff(double) override = 0;
 
 		friend class BlackScholesPricer;
 

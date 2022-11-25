@@ -14,8 +14,8 @@ class AsianOption : public Option
 		bool isAsianOption() override;
 		double GetStrike() override;
 
-		virtual double payoff(double) = 0;
-		virtual OptionType GetOptionType() = 0;
+		virtual double payoff(double) override = 0;
+		virtual OptionType GetOptionType() override = 0;
 
 	protected:
 		std::vector<double> m_timeSteps;

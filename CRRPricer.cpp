@@ -1,7 +1,7 @@
-#pragma once
 #include "CRRPricer.h"
 #include "BinaryTree.h"
 #include "BinaryTree.cpp"
+#include <cmath>
 
 // Constructor
 CRRPricer::CRRPricer(Option* option, int depth, double asset_price, double up, double down, double interest_rate) : m_price(asset_price), m_up(up), m_down(down), m_option(option), m_interest_rate(interest_rate)

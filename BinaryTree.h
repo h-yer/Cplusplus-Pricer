@@ -1,12 +1,14 @@
 #pragma once
 #include <vector>
 
-template <class T>
+
+template <typename T>
 class BinaryTree
 {
 	public:
 		BinaryTree(int);
 		BinaryTree();
+        ~BinaryTree();
 
 		void setDepth(int);
 		void setNode(int, int, T);
@@ -20,3 +22,5 @@ class BinaryTree
 		int m_depth;
 		std::vector<std::vector<T>> m_tree;
 };
+
+

@@ -21,7 +21,7 @@ std::vector<double> AsianOption::getTimeSteps() { return m_timeSteps; }
 // Returns the payoff of one path
 double AsianOption::payoffPath(std::vector<double> spot_prices)
 {
-	int m = spot_prices.size();
+	long m = spot_prices.size();
 	double sum = 0;
 
 	for (int i = 0; i < m; i++)

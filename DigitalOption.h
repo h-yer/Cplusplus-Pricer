@@ -8,11 +8,11 @@ class DigitalOption : public Option
 		DigitalOption(double, double);
 		~DigitalOption();
 
-		double GetStrike();
+		double GetStrike() override;
 		bool isDigital() override;
 
-		virtual OptionType GetOptionType() = 0;
-		virtual double payoff(double) = 0;
+		virtual OptionType GetOptionType() override = 0;
+		virtual double payoff(double) override = 0;
 
 		friend class BlackScholesPricer;
 

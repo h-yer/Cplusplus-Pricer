@@ -1,11 +1,12 @@
-#pragma once
+
 #include "BinaryTree.h"
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <iomanip>
 
 // Constructor
-template <class T>
+template <typename T>
 BinaryTree<T>::BinaryTree(int depth) : m_depth(depth)
 {
 	m_tree = std::vector<std::vector<T>>(m_depth + 1); // Initialize the full size of the tree
@@ -14,11 +15,19 @@ BinaryTree<T>::BinaryTree(int depth) : m_depth(depth)
 }
 
 // Empty Constructor
-template <class T>
+template <typename T>
 BinaryTree<T>::BinaryTree() : m_depth(0), m_tree(std::vector<std::vector<T>>(0)) {}
 
+
+//Destructor
+template<typename T>
+BinaryTree<T>::~BinaryTree()
+{
+
+}
+
 // Set depth of the tree
-template <class T>
+template <typename T>
 void BinaryTree<T>::setDepth(int depth)
 {
 	if (m_depth > depth) // If initial depth is greater than input depth, shrink the tree
@@ -35,15 +44,15 @@ void BinaryTree<T>::setDepth(int depth)
 }
 
 // Assign a value to a specified node
-template <class T>
+template <typename T>
 void BinaryTree<T>::setNode(int index1, int index2, T value) { m_tree[index1][index2] = value; }
 
 // Retrieve the value of a specified node
-template <class T>
+template <typename T>
 T BinaryTree<T>::getNode(int index1, int index2) { return m_tree[index1][index2]; }
 
 // Display the tree
-template <class T>
+template <typename T>
 void BinaryTree<T>::display()
 {
 	for (int i = 0; i < m_tree.size(); i++)
@@ -59,7 +68,7 @@ void BinaryTree<T>::display()
 
 			for (int j = 0; j < m_tree[i].size(); j++)
 			{
-				int value = 0;
+				long value = 0;
 				if (int(m_tree[i][j]) == m_tree[i][j])
 					value = std::to_string(int(m_tree[i][j])).length();
 				else
@@ -81,6 +90,8 @@ void BinaryTree<T>::display()
 				case 4:
 					std::cout << m_tree[i][j];
 					break;
+                default:
+                    std::cout << "ERREUR";
 				}
 			}
 			std::cout << std::endl << std::endl;
@@ -94,7 +105,7 @@ void BinaryTree<T>::display()
 
 			for (int j = 0; j < m_tree[i].size(); j++)
 			{
-				int value = 0;
+				long value = 0;
 				if (int(m_tree[i][j]) == m_tree[i][j])
 					value = std::to_string(int(m_tree[i][j])).length();
 				else
@@ -137,9 +148,9 @@ void BinaryTree<T>::display()
 }
 
 // Return the depth of the tree
-template <class T>
+template <typename T>
 int BinaryTree<T>::getDepth() { return m_depth; }
 
 // Return the length of a specified branch
-template <class T>
+template <typename T>
 int BinaryTree<T>::getLengthVec(int index) { return m_tree[index].size(); }
