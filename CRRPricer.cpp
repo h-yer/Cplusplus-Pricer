@@ -1,6 +1,5 @@
 #include "CRRPricer.h"
 #include "BinaryTree.h"
-#include "BinaryTree.cpp"
 #include <cmath>
 
 // Constructor

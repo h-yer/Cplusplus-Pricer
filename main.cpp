@@ -11,7 +11,6 @@
 #include "AmericanOption.h"
 #include "AsianOption.h"
 #include "BinaryTree.h"
-#include "BinaryTree.cpp"
 #include "BlackScholesPricer.h"
 #include "BlackScholesMCPricer.h"
 #include "CRRPricer.h"
