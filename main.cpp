@@ -45,6 +45,7 @@ int main()
             double U = exp(sigma * sqrt(T / N)) - 1.0;
             double D = exp(-sigma * sqrt(T / N)) - 1.0;
             double R = exp(r * T / N) - 1.0;
+
             
             CRRPricer crr_pricer1(&opt1, N, S0, U, D, R);
             std::cout << "Calling CRR pricer with depth = " << N << std::endl;
@@ -78,6 +79,7 @@ int main()
             double U = exp(sigma * sqrt(T / N)) - 1.0;
             double D = exp(-sigma * sqrt(T / N)) - 1.0;
             double R = exp(r * T / N) - 1.0;
+            
             
             CRRPricer crr_pricer1(&opt1, N, S0, U, D, R);
             std::cout << "Calling CRR pricer with depth = " << N << std::endl;
