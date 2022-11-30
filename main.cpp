@@ -11,6 +11,7 @@
 #include "AmericanOption.h"
 #include "AsianOption.h"
 #include "BinaryTree.h"
+#include "BinaryTree.cpp"
 #include "BlackScholesPricer.h"
 #include "BlackScholesMCPricer.h"
 #include "CRRPricer.h"
@@ -92,7 +93,7 @@ int main()
             std::cout << "CRR pricer explicit formula digital put price = " << crr_pricer2(true) << std::endl;
         }
     }
-    /*
+    
      {
      std::cout << std::endl << "================= Binary Tree =================" << std::endl << std::endl;
     
@@ -124,7 +125,7 @@ int main()
      t3.display();
      }
      #pragma endregion
-    */
+    
 #pragma region TD7
     {
         std::cout << std::endl;
