@@ -17,11 +17,11 @@ class CRRPricer
 		bool getExercise(int, int);
 
 	private:
-		BinaryTree<double> m_tree;
-		BinaryTree<bool> m_exercise;
-		Option* m_option;
-		double m_up;
-		double m_down;
-		double m_price;
-		double m_interest_rate;
+		BinaryTree<double> _tree;
+		BinaryTree<bool> _exercise;
+		Option* _option;
+		double _up;
+		double _down;
+		double _price;
+		double _interest_rate;
 };

@@ -14,5 +14,5 @@ class MT
 
 	private:
 		MT(); //Constructor in private to not be able to instantiate it
-		std::mt19937 m_MTGen;
+		std::mt19937 _MTGen;
 };

@@ -3,17 +3,18 @@
 
 class BlackScholesPricer
 {
-	public:
-		BlackScholesPricer(Option*, double, double, double);
-		~BlackScholesPricer();
+public:
+    BlackScholesPricer(Option*, double, double, double);
+    ~BlackScholesPricer();
 
-		double normalDistrib(double);
-		double operator()();
-		double delta();
+    double normalDistrib(double);
+    double normalCont(double);
+    double operator()();
+    double delta();
 
-	private:
-		Option* m_option;
-		double m_asset_price;
-		double m_interest_rate;
-		double m_volatility;
+private:
+    Option* _option;
+    double _asset_price;
+    double _interest_rate;
+    double _volatility;
 };

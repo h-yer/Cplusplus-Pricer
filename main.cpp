@@ -21,7 +21,7 @@
 
 int main()
 {
-    double S0(100.), K(101.), T(5), r(0.01), sigma(0.1);
+    double S0(95.), K(100.), T(0.5), r(0.02), sigma(0.2);
     
 #pragma region TD5&6
     {
@@ -180,13 +180,13 @@ int main()
 
         CRRPricer* pricer;
         std::vector<std::string> options{ "Call", "Put", "Digital Call", "Digital Put", "American Call", "American Put" };
-        int counter = 0;
         for (auto& opt_ptr : opt_ptrs) {
             pricer = new CRRPricer(opt_ptr, 150, S0, r, sigma);
             pricer->compute();
-            std::cout << "price of " << options[counter] << " : " << (*pricer)() << std::endl << std::endl;
+            std::cout << "price : " << (*pricer)() << std::endl << std::endl;
 
-            counter++;
+            delete pricer;
+            delete opt_ptr;
         }
     }
     #pragma endregion

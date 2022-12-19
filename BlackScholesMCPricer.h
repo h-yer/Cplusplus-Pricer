@@ -14,11 +14,11 @@ class BlackScholesMCPricer
 
 
 	private:
-		Option* m_option;
-		double m_initial_price;
-		double m_interest_rate;
-		double m_volatility;
-		double m_current_estimate;
-		int m_nb_paths;
+		Option* _option;
+		double _initial_price;
+		double _interest_rate;
+		double _volatility;
+		double _current_estimate;
+		int _nb_paths;
 };
 

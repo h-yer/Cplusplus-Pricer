@@ -8,7 +8,7 @@ class Option
 {
 	public:
 		Option(double);
-		~Option();
+		virtual ~Option();
 
 		double GetExpiry();
 
@@ -22,5 +22,5 @@ class Option
 		virtual bool isDigital();
 
 	protected: // Only accessible for children classes
-		double m_expiry;
+		double _expiry;
 };
